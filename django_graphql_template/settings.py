@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Add new apps here
+    # Add apps here
     'django_graphql_template.template_app',
 ]
 
