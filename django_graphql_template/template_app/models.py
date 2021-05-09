@@ -1,5 +1,6 @@
 from django.db import models
 
+# Define database models
 
 class TemplateCategory(models.Model):
     name = models.CharField(max_length=100)
@@ -15,7 +16,8 @@ class TemplateObject(models.Model):
     price = models.IntegerField(null=True, blank=True)
     category = models.ForeignKey(
         'TemplateCategory',
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        related_name='template_objects'
     )
 
     def __str__(self):

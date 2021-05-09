@@ -1,6 +1,8 @@
 from django.contrib import admin
 import django_graphql_template.template_app.models as models
 
+# Register models for the admin site
+
 @admin.register(models.TemplateCategory)
 class TemplateCategoryAmin(admin.ModelAdmin):
     search_fields = ['name']

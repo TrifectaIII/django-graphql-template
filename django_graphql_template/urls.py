@@ -19,6 +19,9 @@ from django.views.decorators.csrf import csrf_exempt
 from graphene_django.views import GraphQLView
 
 urlpatterns = [
+    # admin site
     path('admin/', admin.site.urls),
-    path('graphql', csrf_exempt(GraphQLView.as_view(graphiql=True)))
+    
+    # graphql routes. graphiql is interactive query interface at this route
+    path('gql/', csrf_exempt(GraphQLView.as_view(graphiql=True))),
 ]
