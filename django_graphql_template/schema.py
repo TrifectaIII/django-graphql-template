@@ -11,4 +11,12 @@ class Query(
 ):
     pass
 
-schema = graphene.Schema(query=Query)
+class Mutation(
+    template_app_schema.Mutation,
+    #add more app-level mutations here
+
+    graphene.ObjectType
+):
+    pass
+
+schema = graphene.Schema(query=Query, mutation=Mutation)

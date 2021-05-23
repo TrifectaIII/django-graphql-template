@@ -14,7 +14,7 @@ class TemplateCategory(models.Model):
 class TemplateObject(models.Model):
     name = models.CharField(max_length=100)
     price = models.IntegerField(null=True, blank=True)
-    category = models.ForeignKey(
+    template_category = models.ForeignKey(
         'TemplateCategory',
         on_delete=models.CASCADE,
         related_name='template_objects'

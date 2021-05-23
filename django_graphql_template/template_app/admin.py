@@ -13,6 +13,6 @@ class TemplateCategoryAmin(admin.ModelAdmin):
 
 @admin.register(models.TemplateObject)
 class TemplateObjectAmin(admin.ModelAdmin):
-    list_display = ['name','price','category']
-    list_filter = ['category']
+    list_display = ['name','price','template_category']
+    list_filter = ['template_category']
     search_fields = ['name']
