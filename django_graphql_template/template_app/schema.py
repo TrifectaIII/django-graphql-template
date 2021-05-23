@@ -49,6 +49,7 @@ class Query(graphene.ObjectType):
 
 # Define mutation fields
 class UpdateObjectMutation(graphene.Mutation):
+    # mutation for updating an existing object
     class Arguments:
         id = graphene.ID(required=True)
         price = graphene.Int(required=False)
@@ -67,6 +68,7 @@ class UpdateObjectMutation(graphene.Mutation):
         return UpdateObjectMutation(template_object=template_object)
 
 class NewObjectMutation(graphene.Mutation):
+    # mutation for creating a new object
     class Arguments:
         price = graphene.Int(required=True)
         name = graphene.String(required=True)
