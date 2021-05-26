@@ -3,6 +3,7 @@ import django_graphql_template.template_app.models as models
 
 # Register models for the admin site
 
+# Change admin site header and title
 admin.site.site_header = 'Placeholder Header'
 admin.site.site_title = 'Placeholder Title'
 admin.site.index_title = 'Placeholder Title'

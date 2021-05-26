@@ -11,6 +11,7 @@ class TemplateCategory(models.Model):
     def __str__(self):
         return self.name
 
+
 class TemplateObject(models.Model):
     name = models.CharField(max_length=100)
     price = models.IntegerField(null=True, blank=True)
