@@ -23,5 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     
     # graphql routes. graphiql is interactive query interface at this route
-    path('gql/', csrf_exempt(GraphQLView.as_view(graphiql=True))),
+    path('graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True))),
 ]
