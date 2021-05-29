@@ -8,12 +8,20 @@ admin.site.site_header = 'Placeholder Header'
 admin.site.site_title = 'Placeholder Title'
 admin.site.index_title = 'Placeholder Title'
 
-@admin.register(models.TemplateCategory)
-class TemplateCategoryAmin(admin.ModelAdmin):
+
+@admin.register(models.Genre)
+class GenreAmin(admin.ModelAdmin):
     search_fields = ['name']
 
-@admin.register(models.TemplateObject)
-class TemplateObjectAmin(admin.ModelAdmin):
-    list_display = ['name','price','template_category']
-    list_filter = ['template_category']
+
+@admin.register(models.Author)
+class AuthorAdmin(admin.ModelAdmin):
     search_fields = ['name']
+
+
+@admin.register(models.Book)
+class BookAmin(admin.ModelAdmin):
+    list_display = ['name', 'price', 'author', 'genre']
+    list_filter = ['author', 'genre']
+    search_fields = ['name']
+

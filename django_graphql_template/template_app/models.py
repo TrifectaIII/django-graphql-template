@@ -2,24 +2,35 @@ from django.db import models
 
 # Define database models
 
-class TemplateCategory(models.Model):
+class Genre(models.Model):
     name = models.CharField(max_length=100)
-
-    class Meta:
-        verbose_name_plural = "template categories"
 
     def __str__(self):
         return self.name
 
 
-class TemplateObject(models.Model):
+class Author(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+
+class Book(models.Model):
     name = models.CharField(max_length=100)
     price = models.IntegerField(null=True, blank=True)
-    template_category = models.ForeignKey(
-        'TemplateCategory',
+
+    author = models.ForeignKey(
+        'Author',
         on_delete=models.CASCADE,
-        related_name='template_objects'
+        related_name='books'
+    )
+
+    genre = models.ForeignKey(
+        'Genre',
+        on_delete=models.CASCADE,
+        related_name='books'
     )
 
     def __str__(self):
-        return self.name
+        return "{} by {}".format(self.name, self.author.name)

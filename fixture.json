@@ -1,0 +1,125 @@
+[
+{
+    "model": "template_app.genre",
+    "pk": 1,
+    "fields": {
+        "name": "Sci-Fi"
+    }
+},
+{
+    "model": "template_app.genre",
+    "pk": 2,
+    "fields": {
+        "name": "Fantasy"
+    }
+},
+{
+    "model": "template_app.genre",
+    "pk": 3,
+    "fields": {
+        "name": "Non-Fiction"
+    }
+},
+{
+    "model": "template_app.author",
+    "pk": 1,
+    "fields": {
+        "name": "Brandon Sanderson"
+    }
+},
+{
+    "model": "template_app.author",
+    "pk": 2,
+    "fields": {
+        "name": "Douglas Adams"
+    }
+},
+{
+    "model": "template_app.author",
+    "pk": 3,
+    "fields": {
+        "name": "Glen Cook"
+    }
+},
+{
+    "model": "template_app.author",
+    "pk": 4,
+    "fields": {
+        "name": "David Sirlin"
+    }
+},
+{
+    "model": "template_app.author",
+    "pk": 5,
+    "fields": {
+        "name": "Ethan D. Bloch"
+    }
+},
+{
+    "model": "template_app.author",
+    "pk": 6,
+    "fields": {
+        "name": "Lindsay Ellis"
+    }
+},
+{
+    "model": "template_app.book",
+    "pk": 1,
+    "fields": {
+        "name": "Axiom's End",
+        "price": 28,
+        "author": 6,
+        "genre": 1
+    }
+},
+{
+    "model": "template_app.book",
+    "pk": 2,
+    "fields": {
+        "name": "Proofs and Fundamentals",
+        "price": 80,
+        "author": 5,
+        "genre": 3
+    }
+},
+{
+    "model": "template_app.book",
+    "pk": 3,
+    "fields": {
+        "name": "Playing to Win",
+        "price": 18,
+        "author": 4,
+        "genre": 3
+    }
+},
+{
+    "model": "template_app.book",
+    "pk": 4,
+    "fields": {
+        "name": "Chronicles of the Black Company",
+        "price": 16,
+        "author": 3,
+        "genre": 2
+    }
+},
+{
+    "model": "template_app.book",
+    "pk": 5,
+    "fields": {
+        "name": "Hitchhiker's Guide to the Galaxy",
+        "price": 20,
+        "author": 2,
+        "genre": 1
+    }
+},
+{
+    "model": "template_app.book",
+    "pk": 6,
+    "fields": {
+        "name": "The Way of Kings",
+        "price": 9,
+        "author": 1,
+        "genre": 2
+    }
+}
+]
