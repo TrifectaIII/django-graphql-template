@@ -66,6 +66,23 @@ query variableQuery($myid: ID!) {
   "myid": 1
 }
 ```
+## A query which uses aliases to query more than one model
+```
+query aliasQuery {
+  mybook1: bookById(id: 1) {
+    name
+    genre {
+      name
+    }
+  }
+  mybook2: bookById(id: 2) {
+    name
+    genre {
+      name
+    }
+  }
+}
+```
 ## Not Covered
 Fragments
 
