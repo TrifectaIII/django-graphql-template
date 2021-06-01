@@ -41,26 +41,26 @@ class Query(graphene.ObjectType):
     # fetch all genres
     all_genres = graphene.List(GenreType)
     def resolve_all_genres(root, info):
-        return models.Genre.objects.select_related('books').all()
+        return models.Genre.objects.all()
 
     # fetch a genre given a specific name 
     genre_by_name = graphene.Field(GenreType, name=graphene.String(required=True))
     def resolve_genre_by_name(root, info, name):
         try:
-            return models.Genre.objects.select_related('books').get(name=name)
+            return models.Genre.objects.get(name=name)
         except models.Genre.DoesNotExist:
             return None
 
     # fetch all authors
     all_authors = graphene.List(AuthorType)
     def resolve_all_authors(root, info):
-        return models.Author.objects.select_related('books').all()
+        return models.Author.objects.all()
 
     # fetch an author given a specific name 
     author_by_name = graphene.Field(AuthorType, name=graphene.String(required=True))
     def resolve_author_by_name(root, info, name):
         try:
-            return models.Author.objects.select_related('books').get(name=name)
+            return models.Author.objects.get(name=name)
         except models.Author.DoesNotExist:
             return None
 

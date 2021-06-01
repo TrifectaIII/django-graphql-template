@@ -39,11 +39,11 @@ query argumentQuery {
 ## A query fetching deeper related models
 ```
 query deepQuery {
-  bookById(id: 1) {
+  allGenres {
     name
-    genre {
+    books {
       name
-      books {
+      author {
         name
       }
     }
