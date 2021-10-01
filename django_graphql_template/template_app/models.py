@@ -23,13 +23,13 @@ class Book(models.Model):
     author = models.ForeignKey(
         'Author',
         on_delete=models.CASCADE,
-        related_name='books'
+        related_name='books' # need a related name for backtracking the relationhip in graphene
     )
 
     genre = models.ForeignKey(
         'Genre',
         on_delete=models.CASCADE,
-        related_name='books'
+        related_name='books' # need a related name for backtracking the relationhip in graphene
     )
 
     def __str__(self):
